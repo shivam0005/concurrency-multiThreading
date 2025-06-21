@@ -19,6 +19,7 @@ A thread in Java goes through various states defined in java.lang.Thread.State e
 
 
 **🔹 NEW**
+
 Thread object is created but start() hasn’t been called.
 
 No system resources allocated yet.
@@ -27,6 +28,7 @@ No system resources allocated yet.
 
 
 **🔹 RUNNABLE**
+
 start() is called.
 
 Thread is ready to run and is waiting to be picked by the CPU scheduler.
@@ -37,6 +39,7 @@ It's not actually running yet.
 
 
 **🔹 RUNNING**
+
 The thread scheduler picks this thread from the runnable pool.
 
 Executes the run() method.
@@ -45,18 +48,21 @@ Java does not provide control to move thread explicitly to RUNNING.
 
 
 **🔹 BLOCKED**
+
 Thread wants to access a synchronized block/method but the lock is held by another thread.
 
 Stays blocked until lock is released.
 
 
 **🔹 WAITING**
+
 Thread is waiting indefinitely for another thread to perform a specific action.
 
 E.g., Object.wait(), Thread.join() (without timeout)
 
 
 **🔹 TIMED_WAITING**
+
 Thread waits for a specified amount of time.
 
 E.g., sleep(time), join(time), wait(time)
@@ -65,6 +71,7 @@ E.g., sleep(time), join(time), wait(time)
 
 
 **🔹 TERMINATED (DEAD)**
+
 Thread has completed execution or was aborted due to an error/exception.
 
 Cannot be started again.
