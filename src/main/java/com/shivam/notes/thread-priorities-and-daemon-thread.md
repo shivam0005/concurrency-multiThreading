@@ -42,7 +42,7 @@ A daemon thread is a background thread that:
 
 **🔸 How to Make a Thread a Daemon**
 
-
+// see DaemonAndPriority class inside thread.daemon package
 
 
 
