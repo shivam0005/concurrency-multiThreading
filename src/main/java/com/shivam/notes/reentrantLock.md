@@ -19,9 +19,9 @@ A lock is reentrant if a thread that already holds the lock can acquire it again
 
 **🔄 Example:**
 
-`lock.lock();
+`lock.lock(); 
 lock.lock(); // ✅ allowed (same thread)
-lock.unlock();
+lock.unlock(); 
 lock.unlock(); // need to unlock as many times as you locked
 `
 
@@ -85,11 +85,11 @@ lock.unlock();
 
 **✅ 1. Locking Style**
 
-`| Feature         | `synchronized`                   | `ReentrantLock`                               |
-| --------------- | -------------------------------- | --------------------------------------------- |
-| **Type**        | Implicit lock (built-in keyword) | Explicit object (from `java.util.concurrent`) |
-| **Lock/Unlock** | Managed by JVM                   | You must manually `lock()` and `unlock()`     |
-`
+| Feature         | `synchronized`                   | `ReentrantLock`                               |
+|-----------------|----------------------------------|------------------------------------------------|
+| **Type**        | Implicit lock (built-in keyword) | Explicit object (from `java.util.concurrent`)  |
+| **Lock/Unlock** | Managed by JVM                   | You must manually `lock()` and `unlock()`      |
+
 
 **⚠️ 2. Manual Unlock Required**
 
@@ -99,21 +99,21 @@ lock.unlock();
 
 **⏳ 3. Try Locking / Timeout**
 
-`| Capability         | `synchronized` | `ReentrantLock`      |
+| Capability         | `synchronized` | `ReentrantLock`      |
 | ------------------ | -------------- | -------------------- |
 | Try acquiring lock | ❌ No           | ✅ `tryLock()`        |
 | Wait with timeout  | ❌ No           | ✅ `tryLock(timeout)` |
-`
+
 
     ✅ With ReentrantLock, you can attempt a lock, and take alternate action if it fails — very useful in real systems.
 
 
 **🔕 4. Interruptible Locking**
 
-`| Feature                                         | `synchronized` | `ReentrantLock`                  |
+| Feature                                         | `synchronized` | `ReentrantLock`                  |
 | ----------------------------------------------- | -------------- | -------------------------------- |
 | Respond to `interrupt()` while waiting for lock | ❌ No           | ✅ Yes with `lockInterruptibly()` |
-`
+
 
 📌 Real Use:
     

@@ -9,12 +9,12 @@ For example:
 
 Java provides built-in mechanisms to avoid that, using:
 
-`| Method        | Purpose                             |
+| Method        | Purpose                             |
 | ------------- | ----------------------------------- |
 | `wait()`      | Waits until another thread notifies |
 | `notify()`    | Wakes one waiting thread            |
 | `notifyAll()` | Wakes all waiting threads           |
-`
+
 
 
 # 🔐 2. Basic Rules

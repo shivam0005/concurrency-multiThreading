@@ -61,10 +61,10 @@ t.join(); // Main thread waits here until t finishes
 
 # 🧠 Summary Table
 
-`| Method    | Blocks Current Thread? | State Transition          | Guarantees Execution Order?   |
+| Method    | Blocks Current Thread? | State Transition          | Guarantees Execution Order?   |
  | --------- | ---------------------- | ------------------------- | ---------------------------   |
  | `sleep()` | ✅ Yes                 | `RUNNING → TIMED_WAITING` | ❌ No                        |
  | `yield()` | ✅ Maybe               | `RUNNING → RUNNABLE`      | ❌ No                        |
  | `join()`  | ✅ Yes                 | `RUNNING → WAITING`       | ✅ Yes (waits for another)   |
-`
+
 
