@@ -25,7 +25,6 @@ public class MyExecuter {
         executor.submit(task); // Runnable
 
 
-
 //        Future<Integer> future = executor.submit(() -> 42); // Callable
 //        try {
 //            Integer result = future.get(); // Blocking call to get result
